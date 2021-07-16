@@ -1,0 +1,10 @@
+https://github.com/macloo/python-adv-web-apps/blob/master/python_code_examples/flask/databases/flask_db_write/templates/edit_or_delete.html
+
+https://pythonbasics.org/flask-sqlalchemy/
+
+https://www.section.io/engineering-education/flask-database-integration-with-sqlalchemy/
+
+https://www.javatpoint.com/flask-sqlalchemy
+
+https://www.tutorialandexample.com/flask-session/
+

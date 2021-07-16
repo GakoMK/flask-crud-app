@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+<!-- {% block html_head %}
+  <style type="text/css">
+    .important {
+      color: #336699;
+    }
+  </style>
+{% endblock %} -->
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> Tytuł </th>
+                            <th> Autor </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book in books %}
+                        
+                        <tr>
+                                <td> {{book.id}} </td>
+                                <td style="text-transform: lowercase;"> {{book.title}} </td>
+                                <td> {{book.author}} </td>
+                                <td>
+                                    <a class="btn btn-primary" href="/edit/?id={{book.id}}">Edit</a>
+                                    <form role="form" method="POST" action="/delete">
+                                        <input type="hidden" name="id" class="form-control" value="{{book.id}}"/>
+                                        <button type="submit" class="btn btn-secondary"> Delete </button>
+                                    </form>
+                                </td>
+                        </tr>                    
+                        {% endfor %}                    
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
